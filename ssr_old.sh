@@ -651,7 +651,7 @@ setUser(){
 ss_link_qr(){
 	SSbase64=`echo -n "${method}:${password}@${ip}:${port}" | base64 | sed ':a;N;s/\n/ /g;ta' | sed 's/ //g'`
 	SSurl="ss://"${SSbase64}
-	SSQRcode="http://doub.pw/qr/qr.php?text="${SSurl}
+	SSQRcode="https://cli.im/api/qrcode/code?text="${SSurl}
 	ss_link="${Word_ss_like} : ${Green_font_prefix}${SSurl}${Font_color_suffix} \n${Word_ss_qr_code} : ${Green_font_prefix}${SSQRcode}${Font_color_suffix}"
 }
 ssr_link_qr(){
@@ -660,14 +660,14 @@ ssr_link_qr(){
 	SSRPWDbase64=`echo -n "${password}" | base64 | sed ':a;N;s/\n/ /g;ta' | sed 's/ //g'`
 	SSRbase64=`echo -n "${ip}:${port}:${SSRprotocol}:${method}:${SSRobfs}:${SSRPWDbase64}" | base64 | sed ':a;N;s/\n/ /g;ta' | sed 's/ //g'`
 	SSRurl="ssr://"${SSRbase64}
-	SSRQRcode="http://doub.pw/qr/qr.php?text="${SSRurl}
+	SSRQRcode="https://cli.im/api/qrcode/code?text="${SSRurl}
 	ssr_link="${Word_ssr_like} : ${Green_font_prefix}${SSRurl}${Font_color_suffix} \n${Word_ssr_qr_code} : ${Green_font_prefix}${SSRQRcode}${Font_color_suffix} \n "
 }
 ss_link_qr_1(){
 	SSbase64=`echo -n "${method}:${user_password}@${ip}:${user_port}" | base64 | sed ':a;N;s/\n/ /g;ta' | sed 's/ //g'`
 	#echo -e "${user_port}" && echo -e "${user_password}" && echo -e "${SSbase64}"
 	SSurl="ss://"${SSbase64}
-	SSQRcode="http://doub.pw/qr/qr.php?text="${SSurl}
+	SSQRcode="https://cli.im/api/qrcode/code?text="${SSurl}
 	ss_link="${Word_ss_like} : ${Green_font_prefix}${SSurl}${Font_color_suffix} \n${Word_ss_qr_code} : ${Green_font_prefix}${SSQRcode}${Font_color_suffix}"
 }
 ssr_link_qr_1(){
@@ -677,7 +677,7 @@ ssr_link_qr_1(){
 	SSRbase64=`echo -n "${ip}:${user_port}:${SSRprotocol}:${method}:${SSRobfs}:${SSRPWDbase64}" | base64 | sed ':a;N;s/\n/ /g;ta' | sed 's/ //g'`
 	#echo -e "${user_port}" && echo -e "${user_password}" && echo -e "${SSRbase64}"
 	SSRurl="ssr://"${SSRbase64}
-	SSRQRcode="http://doub.pw/qr/qr.php?text="${SSRurl}
+	SSRQRcode="https://cli.im/api/qrcode/code?text="${SSRurl}
 	ssr_link="${Word_ssr_like} : ${Green_font_prefix}${SSRurl}${Font_color_suffix} \n${Word_ssr_qr_code} : ${Green_font_prefix}${SSRQRcode}${Font_color_suffix} \n "
 }
 #显示用户账号信息
